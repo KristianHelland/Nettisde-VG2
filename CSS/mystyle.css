@@ -1,0 +1,187 @@
+body{
+    margin: 0px;
+}
+.flexbox-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flexbox-item{
+    margin: 10px;
+    border: 3px, solid, #000000;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: Space;
+}
+
+.header{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 36%;
+    font-size: 35px;
+    color: black;
+    min-height: 50px;
+    width: 100%;
+}
+
+.nav-container{
+    display: flex;
+    justify-content:right;
+    align-items:flex-start ;
+    align-content: flex-end;
+    flex-wrap: nowrap;
+}
+.nav-item{
+    max-width: 200px;
+    margin-left: 5px;
+    text-align: center;
+    border: 3px solid #000000;
+}
+
+.nav-item-1{
+    min-height: 100px;
+    width:200px ;
+}
+
+.nav-item-2{
+    min-height: 150px;
+    max-width:200px ;
+}
+
+.nav-item-3{
+    min-height: 150px;
+    max-width:200px ;
+}
+
+@media only screen and (max-width: 420px) {
+    .nav-container {
+        flex-wrap: wrap; justify-content: center;
+    } 
+    .dropbtn{
+        min-width: 100%;
+    }
+}
+
+.home { /*sier bilde skal ta opp all plassen #home-link bruker*/
+    width: 100%;
+  }
+  
+  #home-link { /*setter størrelsen på linken*/
+    width:80px;
+  }
+
+
+
+  /*DROPDOWN MENY TING*/
+/*Selve knappen*/
+.dropbtn {
+    min-width: 200px;
+    font-size: 25px;
+    padding: 20px 40px;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+    text-align: center;
+    background-color: Transparent;
+}
+
+.dropbtn:hover{
+    font-size: 30px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+/*Sier hvor innholdet skal*/
+.dropdown {
+    position: relative;
+    float: left;
+    display: block;
+    
+}
+
+/*Innholdet*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    background-color: transparent;
+    min-width: 10%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+/*Hyperkobling i dropdown menyinnholdet*/
+    .dropdown-content a {
+        color: black;
+        padding: 20px 40px;
+        text-decoration: none;
+        display: block;
+        flex-wrap: nowrap;
+        min-width: 120px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: rgba(0,0,0,0.2)
+    }
+
+/*Gjør at menyen vises når du holder over mørkere farge når du holder over knappen*/
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size:30px;
+}
+
+#background{
+    background-image: url(Background.jpg);
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    padding: 0px;
+    background-position: right 50% top 50%
+}
+
+@media only screen and (max-width: 1325px) {
+    #background{
+    width: auto;
+    }
+}
+
+.mainframe{
+    display: flex;
+    width: 100%;
+    gap: 2em;
+    min-height: 500px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.mainframe-item{
+    width: 30%;
+    border: #000000 solid 3px;
+    min-height:100px;
+    background-color: white;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    max-height: 50px;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+}
+

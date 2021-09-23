@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8"> <!-- æøå -->
+  <title>Bildeserie</title>
+  <link rel="stylesheet" type="text/CSS" href="../CSS/minstil.css">
+</head>
+<body>
+  <div class="grid-container">
+  <div class="header">Bildeserie</div>
+  <div class="menu">
+    <div class="dropdown">
+     <button class="dropbtn">Fag</button>
+       <div class="dropdown-content">
+       <a href="../index.php">Forside</a>
+        <a href="konseptutviklingogprogramering.html">Konseptutvikling og Programmering</a>
+        <a href="../PHP/Teknologiforståelse.php">Teknologiforståelse</a>
+      </div>
+    </div> 
+  </div>
+  <div class="menu">
+    <div class="dropdown">
+     <button class="dropbtn">Prosjekter</button>
+       <div class="dropdown-content">
+       <a href="koronadagbok.html">Koronadagbok</a>
+       <a href="Årbokoppgave.html">Årbokoppgave</a>
+      </div>
+    </div> 
+  </div>
+  <div class="hovedvindu">
+    
+    <div class="slideshow container">
+      
+    <div class="mySlides fade">
+    <img src="../Ferdige bilder/Hele Familien.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+    <img src="../Ferdige bilder/Kastet ut.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+    <img src="../Ferdige bilder/Mister alt.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+    <img src="../Ferdige bilder/Uteligger.jpg" style="width:100%">
+    
+    
+    </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+    </div>
+    <br>
+  
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+   </div>
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  
+  </div>
+</div>
+</body>
+</html>
