@@ -1,0 +1,144 @@
+<!doctype html>
+  <head>
+    <link href="../CSS/mystyle2.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Prøve flex</title>
+  </head>
+  <body>
+    <div class="flexbox-container">
+      <div class="header-cotainer">
+        <div class="header">
+          <a href="../index.html" id="home-link"><img class="home" src="../Images/kris.png"></a>
+          Kristians side
+        </div>
+        <div class="nav-container">
+          <div class="dropdown">
+            <button class="dropbtn">Personlig</button>
+              <div class="dropdown-content">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Me</a>
+                <a href="">Kitty</a>
+              </div>
+          </div>
+            <div class="dropdown">
+            <button class="dropbtn">Profesjonell</button>
+              <div class="dropdown-content">
+                <a href="Nettside vg1 prev.html">Nettside VG1</a>
+                <a href="../index.html">Nettside VG2</a>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="mainframe">
+          <h1>Her er prosjekter fra VG1</h1>
+          
+            <div class="mainframe-item">
+              <p>Prosjekt 1</p>
+              Her er Bildeserien fra medieproduksjon
+            <div class="slideshow container">
+      
+              <div class="mySlides fade">
+              <img src="../Nettside vg1/Bilder/Hele Familien.png" style="width:100%">
+              </div>
+            
+              <div class="mySlides fade">
+              <img src="../Nettside vg1/Bilder/Kastet ut.png" style="width:100%">
+              </div>
+            
+              <div class="mySlides fade">
+              <img src="../Nettside vg1/Bilder/Mister alt.png" style="width:100%">
+              </div>
+            
+              <div class="mySlides fade">
+              <img src="../Nettside vg1/Bilder/Uteligger.png" style="width:100%" >
+              
+              
+              </div>
+            
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+              </div>
+              <br>
+            
+              <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+              <span class="dot" onclick="currentSlide(4)"></span> 
+             </div>
+              <script>
+              var slideIndex = 1;
+              showSlides(slideIndex);
+              
+              function plusSlides(n) {
+                showSlides(slideIndex += n);
+              }
+              
+              function currentSlide(n) {
+                showSlides(slideIndex = n);
+              }
+              
+              function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+              }
+              </script>
+            </div>
+
+            <div class="mainframe-item">
+              <p>Database</p>
+                Her er dataen som ble samlet fra en værstajon som jeg og en klassekammerat satt opp i klasserommet vårt for å holde oversikt over inneklima
+              <iframe
+                src="Bilder/Database.jpg" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >
+                </iframe>  
+            </div>
+
+            <div class="mainframe-item">
+              <p>Prosjekt 3</p>
+              Her er en videodagbok jeg laget i medieproduskon under andre Covid-19 bølge
+              <iframe
+                src="https://www.youtube.com/embed/CBGPbmNcOqg" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >
+                </iframe>  
+            </div>
+
+          <div class="mainframe-item">
+            <p>Prosjekt 4</p>
+            Her er en artikkel som jeg skrev som et bidrag til AS sin årbok
+            <iframe src="Bilder/MPartikkel.pdf" ></iframe>
+        </div>
+
+        <div class="mainframe-item">
+          <p>Prosjekt 5</p>
+          Her er en video som forklarer databaseprosjektet vi hadde
+          <iframe
+          src="https://www.youtube.com/embed/V2TeE5MFRfo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="mainframe-item">
+            <p>Prosjekt 6</p>
+            Her er en video som viser prosessen da vi jobbet med microbit
+            <iframe
+            src="https://www.youtube.com/embed/r5pbENLgN9k" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >
+            </iframe>   
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
