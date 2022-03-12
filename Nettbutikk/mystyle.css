@@ -1,0 +1,57 @@
+html{
+  background-color:black ;
+  border: 0;
+  margin: 0;
+}
+
+.mainframe{
+  display:flex;
+  background-color:black;
+  justify-content:space-between;
+}
+
+.nav-container{
+  display:flex;
+  background-color: gray;
+  justify-content:end;
+}
+ 
+ #cardsec {
+    display: flex;
+    flex-direction: row;
+    Justify-content:space-between;
+  }
+
+.card{
+  background-color: #949494;
+  margin: 1em;
+  width: 16em;
+  height: 23em;
+  border-radius: 5px;
+}
+
+.card-img{
+  margin: 1rem 0 0 1.5rem;
+  height:13em;
+  width:13em;
+  object-fit:scale-down;
+  border-radius: 5px;
+}
+
+.card .card-interface{
+  margin-right: 1em;
+  margin-left: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card .card-interface .buy-button {
+  background-color: #ffffff;
+  background-position: 50% 50%;
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
